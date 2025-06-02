@@ -1,0 +1,27 @@
+
+img, a {
+    border:none;
+    outline:none;
+}
+
+/* Main stuff */
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.noscroll {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.noscroll::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+#container {
+    display: block;
+    padding:0px;
+    margin:0px;
+}
