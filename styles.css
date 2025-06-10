@@ -1,4 +1,5 @@
 
+
 img, a {
     border:none;
     outline:none;
@@ -9,13 +10,25 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0px;
-    font-family: 'Montserrat', sans-serif;
     background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-family: 'courier', monospace;
+    /* Prevents highlighting things */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .noscroll {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
+    overscroll-behavior: none; /* Prevents scrolling */
+    overflow: hidden; /* Hides the scrollbar */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    overflow-y: hidden; /* Hides vertical scrollbar */
+    position: fixed; /* Prevents scrolling */
 }
 
 .noscroll::-webkit-scrollbar { 
@@ -53,7 +66,7 @@ body {
 
 h1 {
     position: absolute;
-    top:70%;
+    bottom:1%;
     left: 50%;
     transform: translateX(-50%);
     width:auto;
@@ -65,7 +78,49 @@ h1 {
 
 .overlay audio {
     position: absolute;
-    top: 80%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
+
+ul.scroll-container {
+  background-color: #33333334;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  top: 70%;
+  width: 80%;
+  height: auto;
+  max-height: 20%;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.scroll-container li {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:200px;
+    height:auto;
+    max-height: 70%;
+    object-fit: contain;
+    display:inline-block;
+}
+
+li img {
+    position: relative;
+    width:100%;   
+    height: 150px;
+    object-fit: contain;
+}
+
+li p {
+    position: relative;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0px;
+    object-fit: contain;
+}
+
